@@ -1,6 +1,6 @@
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, render_template, request
+from agent import MDPAgent  # Importing MDPAgent class
 from tictactoe import TicTacToe  # Importing TicTacToe class
-from agent import MDPAgent        # Importing MDPAgent class
 
 app = Flask(__name__)
 
@@ -40,6 +40,9 @@ def reset():
     return jsonify({
         'board': game.board
     })
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=3000)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000)
