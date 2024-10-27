@@ -43,3 +43,10 @@ def reset():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000)
+
+    return jsonify({
+        'board': game.board
+    })
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=3000)
